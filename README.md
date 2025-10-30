@@ -34,7 +34,7 @@ Improve code or explanations
 
 Share your own projects
 
-See CONTRIBUTING.md for details.
+See Contributing.md for details.
 📚 Resources
 Check out the resources/ folder for cheat sheets, book recommendations, and helpful links.
 
