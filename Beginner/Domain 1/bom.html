@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Browser Object Model Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+    h1 {
+      color: #333;
+    }
+    .info-box {
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 15px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Browser Object Model Explorer</h1>
+
+  <div class="info-box" id="screenInfo">
+    <strong>Screen Info:</strong>
+    <p id="screenDetails"></p>
+  </div>
+
+  <div class="info-box" id="locationInfo">
+    <strong>Location Info:</strong>
+    <p id="locationDetails"></p>
+  </div>
+
+  <div class="info-box" id="navigatorInfo">
+    <strong>Navigator Info:</strong>
+    <p id="navigatorDetails"></p>
+  </div>
+
+  <button onclick="showBOM()">Show BOM Details</button>
+
+  <script>
+    function showBOM() {
+      // Screen object
+      const screenDetails = `
+        Width: ${screen.width}px<br>
+        Height: ${screen.height}px<br>
+        Available Width: ${screen.availWidth}px<br>
+        Available Height: ${screen.availHeight}px
+      `;
+      document.getElementById("screenDetails").innerHTML = screenDetails;
+
+      // Location object
+      const locationDetails = `
+        URL: ${location.href}<br>
+        Hostname: ${location.hostname}<br>
+        Pathname: ${location.pathname}<br>
+        Protocol: ${location.protocol}
+      `;
+      document.getElementById("locationDetails").innerHTML = locationDetails;
+
+      // Navigator object
+      const navigatorDetails = `
+        Browser: ${navigator.appName}<br>
+        Version: ${navigator.appVersion}<br>
+        Platform: ${navigator.platform}<br>
+        Language: ${navigator.language}
+      `;
+      document.getElementById("navigatorDetails").innerHTML = navigatorDetails;
+    }
+  </script>
+
+</body>
+</html>
